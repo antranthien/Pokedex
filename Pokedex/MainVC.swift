@@ -27,7 +27,7 @@ class MainVC: UIViewController {
         searchBar.returnKeyType = .done
         parsePokemonCSV()
         
-        //initAudio()
+        initAudio()
     }
     
     func initAudio(){
@@ -39,6 +39,7 @@ class MainVC: UIViewController {
             
             // Loop infinitely
             musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
         } catch let err as NSError {
             print(err.debugDescription)
         }
